@@ -24,7 +24,8 @@ jobs:
         with:
           flutter-version : "2.2.0"
       - run : flutter upgrade
-      - run : flutter clean 
+      - run : flutter clean
+      - run : flutter pub cache repair 
       - run : flutter pub get
       - run : flutter test
       - run : flutter build apk --debug --split-per-abi
